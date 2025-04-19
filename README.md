@@ -1,3 +1,2 @@
 # NextStop
-Explore Gujarat by Bus
-Bsu booking system 
+Explore Gujarat by Bus. Its a bus booking system 
