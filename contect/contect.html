@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('../login page/image/home1.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+       
+
+        /* Close Button */
+        .closebtn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 25px;
+            cursor: pointer;
+            color: white;
+        }
+
+
+        /* Contact Form */
+        .container {
+            background: white;
+            padding: 35px;
+            border-radius: 9px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* Button */
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #388E3C;
+        }
+
+        /* MENU Button */
+        .btn1 {
+            width: 150px;
+            height: 50px;
+            border-radius: 5px;
+            border: none;
+            transition: all 0.5s;
+            font-size: 20px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            background: #45a049;
+            color: #f5f5f5;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+        }
+
+        .btn1:hover {
+            box-shadow: 0 0 20px 0px #2e2e2e3a;
+        }
+
+        .btn1 .icon {
+            position: absolute;
+            height: 40px;
+            width: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.5s;
+        }
+
+        .btn1 .text {
+            transform: translateX(55px);
+        }
+
+        .btn1:hover .icon {
+            width: 175px;
+        }
+
+        .btn1:hover .text {
+            opacity: 0;
+        }
+
+        /* MENU Links (Initially Hidden) */
+        .menu-links {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 10px;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            margin-top: 10px;
+        }
+
+        .menu-links a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: black;
+            font-size: 18px; 
+            transition: 0.3s;
+        }
+
+        .menu-links a:hover {
+            background: #ddd;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU Button -->
+    
+    <button class="btn1" id="menuButton">
+        <span class="icon">
+            <svg viewBox="0 0 175 80" width="40" height="40">
+                <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                <rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+            </svg>
+        </span>
+        <span class="text">MENU</span>
+    </button>
+
+    <!-- Home & Contact Us Links -->
+    <div id="menuLinks" class="menu-links">
+        <a href="../home.php">Home</a>
+         
+        <a href="../about_us/about.html">About Us</a>
+        <a href="../login page/index.php">Log in / Sign in </a>
+        <a href="../schedule/scchedule.php">View Timetable</a>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form action="contact.php" method="POST">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <textarea type="text" name="subject" id="subject" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" name="submit">Send Message</button>
+        </form>
+    </div>
+    <!-- JavaScript -->
+    <script>
+        let menuButton = document.getElementById("menuButton");
+        let menuLinks = document.getElementById("menuLinks");
+
+        // Show the menu when hovering over the button
+        menuButton.addEventListener("mouseenter", function () {
+            menuLinks.style.display = "block";
+            menuLinks.style.position = "absolute";
+            menuLinks.style.top = menuButton.offsetHeight + 10 + "px"; // Adjusts position below the button
+            menuLinks.style.left = menuButton.offsetLeft + "px"; // Aligns with the button
+        });
+
+        // Keep the menu open when hovering over it
+        menuLinks.addEventListener("mouseenter", function () {
+            menuLinks.style.display = "block";
+        });
+
+        // Hide the menu when cursor leaves both the button and menu
+        menuButton.addEventListener("mouseleave", function () {
+            setTimeout(() => {
+                if (!menuLinks.matches(":hover")) {
+                    menuLinks.style.display = "none";
+                }
+            }, 200);
+        });
+
+        menuLinks.addEventListener("mouseleave", function () {
+            menuLinks.style.display = "none";
+        });
+
+    </script>
+
+</body>
+
+</html>

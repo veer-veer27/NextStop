@@ -1,0 +1,207 @@
+/* Enhanced Background */
+body {
+    background: linear-gradient(to bottom, #ddebf8, #83b8db);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+
+/* Improved Table */
+table {
+    border-collapse: collapse;
+    width: 95%;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th {
+    background: #4caf50;
+    color: white;
+    text-transform: uppercase;
+    font-size: 19px; /* Reduced font size */
+    padding: 10px; /* Reduced padding */
+}
+
+td {
+    padding: 8px; /* Reduced padding */
+    font-size: 19px; /* Reduced font size */
+    text-transform: uppercase;
+}
+
+tr:hover {
+    background-color: #f0f8f3;
+    transition: 0.3s ease-in-out;
+}
+
+
+/* Button Enhancements */
+button {
+    background:#4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #1abc9c, #4caf50);
+    transform: scale(1.05);
+}
+
+/* Modal Enhancements */
+.modal {
+    background: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+h2 {
+    text-align: center;
+    font-size: 33px;
+    font-weight: lighter;
+
+    background: #4caf50;
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow: 2px 2px 10px rgba(9, 1, 1, 0.2);
+    margin: 30px auto;
+    width: fit-content;
+
+}
+/* ✨ Train Animation */
+.train-animation {
+    position: fixed;
+    left: -150px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 120px; /* Adjust size */
+    height: 60px;
+    background: url('train.png') no-repeat center/cover; /* Replace with actual train image */
+    animation: moveTrain 2s linear forwards;
+    display: none;
+}
+
+@keyframes moveTrain {
+    0% {
+        left: -150px;
+        opacity: 1;
+    }
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+/* 🏷️ White Train Availability Heading */
+h2 {
+    color: white !important; /* Force it to be white */
+    text-align: center;
+    font-size: 33px;
+    font-weight: lighter;
+    background: #26ac28;
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow: 2px 2px 10px rgba(9, 1, 1, 0.2);
+    margin: 30px auto;
+    width: fit-content;
+}
+.no-trains-message {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4caf50;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffe6e6;
+    border: 1px solid #ff3b3b;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 20px auto;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.modal {
+    /* Seat selection modal styling */
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    width: 600px;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.driver-seat {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.bus-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#seatsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.seat {
+    width: 45px;
+    height: 45px;
+    background: green;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.seat:hover {
+    background: blue;
+}
+
+.seat.selected {
+    background: red;
+}
+
+.aisle {
+    width: 20px;
+}

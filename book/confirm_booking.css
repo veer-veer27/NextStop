@@ -1,0 +1,158 @@
+/* General Page Styling */
+body {
+    background: linear-gradient(to bottom, #ddebf8, #83b8db);
+    display: flex;
+    font-family: Arial, sans-serif;
+
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Booking Details Container */
+.container {
+    position: relative; /* Ensures .payment-form positions relative to this */
+    margin: auto; /* Center it horizontally */
+}
+
+/* Heading */
+h2 {
+    background: linear-gradient(to right, #2c9c66, #29b984);
+    color: white;
+    margin: -20px -20px 20px -20px;
+    padding: 20px;
+    border-radius: 12px 12px 0 0;
+    font-size: 18px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Total Price */
+.total-amount {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0073e6;
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Pay Now Button */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: green;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: darkgreen;
+}
+
+/* Payment Popup */
+.payment-options {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.payment-options h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.payment-options button {
+    display: block;
+    margin: 10px 0;
+    padding: 14px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    background: #29b984;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.payment-options button:hover {
+    transform: scale(1.03);
+}
+
+.close-btn {
+    background: red;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+/* Payment Form Styling */
+.payment-form {
+    display: none;
+    position: fixed;  /* Fixed to viewport for independent movement */
+    top: 30%; /* Adjust vertically */
+    right: -350px; /* Initially hidden outside screen */
+    width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.5s ease-in-out; /* Smooth slide-in effect */
+    text-align: left;
+    z-index: 2000; /* Ensures it stays above other elements */
+}
+
+/* When active, slide into the red-circle area */
+.payment-form.active {
+    right: 120px; /* Stops near the right of the content box */
+}
+
+/* Mobile Optimization */
+@media only screen and (max-width: 768px) {
+    .payment-form {
+        right: -100%; /* Start fully hidden */
+        width: 90%;
+    }
+    
+    .payment-form.active {
+        right: 5%;
+    }
+}
+
+
+
+
