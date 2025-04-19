@@ -23,7 +23,7 @@
 - `process_booking.php`: Handles booking logic and DB insert
 - `download_ticket.php`: Generates PDF ticket
 - `manage_buses.php`: Admin dashboard
-IMP - create a new file named book and past the following files in it (TCPDF-main, available_buses.php,book.css,book.htmlbook.php,config.php,confirm_booking.ccs,confirm_booking.php,db_connection.php,dwonload_ticket.php,fetch_booked_seats.php,payment_success.php,process_booking.php,store_booking.php style10.css)
+IMP - DOWNLOAD THE TCPDF FILE FROM THE OFFICIAL WEBSITE AND PASTE THE FILE IN book FOLDER 
 And to access the admin portal press crtl+A.
 ## Database Setup
 
