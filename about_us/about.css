@@ -1,0 +1,181 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f0f8ff, #d1eaff);
+    color: #333;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #0073e6, #005bb5);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    background: white;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Services & Support */
+ul {
+    text-align: left;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    color: #444;
+}
+
+ul li {
+    margin: 12px 0;
+    font-size: 1.1em;
+}
+
+/* Modern Buttons */
+.btn {
+    background: linear-gradient(135deg, #0073e6, #005bb5);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #005bb5, #004499);
+    transform: scale(1.05);
+}
+
+/* Menu Button */
+.btn1 {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    width: 160px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    background: #45a049;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.btn1:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Menu Links */
+.menu-links {
+    display: none;
+    position: fixed;
+    top: 75px;
+    left: 15px;
+    background: white;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.menu-links a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 0;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.menu-links a:hover {
+    color: #45a049;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn1 {
+        width: 140px;
+        font-size: 16px;
+    }
+
+    .menu-links {
+        width: 180px;
+    }
+}

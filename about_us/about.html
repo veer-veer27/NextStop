@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | NextStop</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+    <!-- Menu Button -->
+    <button class="btn1" id="menuButton">
+        <span class="icon">
+            <svg viewBox="0 0 175 80" width="40" height="40">
+                <rect width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                <rect y="30" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+                <rect y="60" width="80" height="15" fill="#f0f0f0" rx="10"></rect>
+            </svg>
+        </span>
+        <span class="text">MENU</span>
+    </button>
+
+    <!-- Menu Links -->
+    <div id="menuLinks" class="menu-links">
+        <a href="../home.php">Home</a>
+        <a href="../contact/contact.html">Contact Us</a>
+        <a href="../login page/index.php">Log in / Sign in</a>        
+        <a href="../schedule/schedule.html">View Timetable</a>
+    </div>
+
+    <section class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Welcome to <strong>NextStop</strong>, your ultimate destination for hassle-free bus bookings!</p>
+            <p>At <strong>NextStop</strong>, we believe that travel should be <strong>convenient, efficient, and enjoyable</strong>. Our platform is designed to make booking bus tickets simple and seamless, whether you're planning a daily commute or a long journey.</p>
+        </div>
+    </section>
+
+    <section class="mission">
+        <div class="container">
+            <h3>Our Mission</h3>
+            <p>Our goal is to provide a user-friendly and reliable bus booking experience. We aim to connect passengers with the best travel options, ensuring a smooth and stress-free journey.</p>
+        </div>
+    </section>
+
+    <section class="vision">
+        <div class="container">
+            <h3>Our Vision</h3>
+            <p>At <strong>NextStop</strong>, we envision a future where bus travel is <strong>accessible, eco-friendly, and technologically advanced</strong>. We strive to revolutionize bus bookings with smart solutions that enhance the overall passenger experience.</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h3>Our Services</h3>
+            <ul>
+                <li>🚌 <strong>Bus Ticket Booking</strong> – Effortlessly book tickets for various routes and destinations.</li>
+                <li>📅 <strong>Flexible Scheduling</strong> – Choose the most convenient departure and arrival times.</li>
+                <li>📢 <strong>Real-Time Bus Updates</strong> – Stay informed about delays, stop changes, and schedules.</li>
+                <li>💳 <strong>Multiple Payment Options</strong> – Pay securely using cards, wallets, and online banking.</li>
+                <li>🛠 <strong>User-Friendly Interface</strong> – Enjoy a smooth and intuitive booking experience.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="support">
+        <div class="container">
+            <h3>24/7 Customer Support</h3>
+            <p>Need assistance? Our dedicated support team is available <strong>24/7</strong> to help you with bookings, cancellations, and any travel-related queries. Reach out to us via:</p>
+            <ul>
+                <li>📞 <strong>Phone:</strong> +91 98765 43210</li>
+                <li>📧 <strong>Email:</strong> support@nextstop.com</li>
+                <li>💬 <strong>Live Chat:</strong> Available on our website</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 NextStop. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let menuButton = document.getElementById("menuButton");
+        let menuLinks = document.getElementById("menuLinks");
+
+        menuButton.addEventListener("mouseenter", function () {
+            menuLinks.style.display = "block";
+        });
+
+        menuLinks.addEventListener("mouseenter", function () {
+            menuLinks.style.display = "block";
+        });
+
+        menuButton.addEventListener("mouseleave", function () {
+            setTimeout(() => {
+                if (!menuLinks.matches(":hover")) {
+                    menuLinks.style.display = "none";
+                }
+            }, 200);
+        });
+
+        menuLinks.addEventListener("mouseleave", function () {
+            menuLinks.style.display = "none";
+        });
+    </script>
+
+</body>
+</html>
